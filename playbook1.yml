@@ -8,7 +8,7 @@
   - name: start httpd
     service: name=httpd state=started
   - name: deploy html file
-    copy: src=/target/addressbook.war dest=/var/www/html
+    copy: src=//var/lib/jenkins/workspace/Project_1/target/addressbook.war dest=/var/www/html
     notify: restart httpd
   handlers:
   - name: restart httpd
